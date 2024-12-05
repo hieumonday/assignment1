@@ -29,11 +29,11 @@ public class Processor {
                 case 1:
                     System.out.println("Enter student details:");
                     System.out.print("ID: ");
-                    String studentId = sc.nextLine();
+                    String sId = sc.nextLine();
                     System.out.print("Name: ");
-                    String studentName = sc.nextLine();
-                    System.out.print("Date of Birth (dd/MM/yyyy): ");
-                    String studentDob = sc.nextLine();
+                    String sName = sc.nextLine();
+                    System.out.print("Date of Birth (dd/mm/yyyy): ");
+                    String sDate = sc.nextLine();
                     System.out.print("GPA: ");
                     double gpa = sc.nextDouble();
                     sc.nextLine();
@@ -41,7 +41,7 @@ public class Processor {
                     double tuitionFee = sc.nextDouble();
                     sc.nextLine();
                     try {
-                        Student student = new Student(studentId, studentName, new SimpleDateFormat("dd/MM/yyyy").parse(studentDob), gpa, tuitionFee);
+                        Student student = new Student(sId, sName, new SimpleDateFormat("dd/mm/yyyy").parse(sDate), gpa, tuitionFee);
                         personList.addPerson(student);
                         System.out.println("Student added successfully.");
                     } catch (ParseException e) {
@@ -51,11 +51,11 @@ public class Processor {
                 case 2:
                     System.out.println("Enter teacher details:");
                     System.out.print("ID: ");
-                    String teacherId = sc.nextLine();
+                    String tId = sc.nextLine();
                     System.out.print("Name: ");
-                    String teacherName = sc.nextLine();
-                    System.out.print("Date of Birth (dd/MM/yyyy): ");
-                    String teacherDob = sc.nextLine();
+                    String tName = sc.nextLine();
+                    System.out.print("Date of Birth (dd/mm/yyyy): ");
+                    String tDate = sc.nextLine();
                     System.out.print("Number of Classes: ");
                     int numberOfClasses = sc.nextInt();
                     sc.nextLine();
@@ -63,7 +63,7 @@ public class Processor {
                     double baseSalary = sc.nextDouble();
                     sc.nextLine();
                     try {
-                        Teacher teacher = new Teacher(teacherId, teacherName, new SimpleDateFormat("dd/MM/yyyy").parse(teacherDob), numberOfClasses, baseSalary);
+                        Teacher teacher = new Teacher(tId, tName, new SimpleDateFormat("dd/mm/yyyy").parse(tDate), numberOfClasses, baseSalary);
                         personList.addPerson(teacher);
                         System.out.println("Teacher added successfully.");
                     } catch (ParseException e) {
@@ -122,11 +122,11 @@ public class Processor {
                     }
                     break;
                 case 9:
-                    System.out.println("Exiting...");
+                    System.out.println("Exiti");
                     sc.close();
                     return;
                 default:
-                    System.out.println("Invalid choice. Please try again.");
+                    System.out.println("I Please enter try again.");
                     break;
             }
         }
